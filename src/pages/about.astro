@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import '../styles/global.css';
+const pageTitle = "Chemtechについて";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title={pageTitle}>
 	<main>
 		<svg
 			class="astro-a"
@@ -35,7 +37,7 @@ import Card from '../components/Card.astro';
 		</svg>
 		<a href="/">トップ</a>
 		<a href="/about/">概要</a>
-		<h1>Chemtechについて</h1>
+		<h1>{pageTitle}</h1>
 		<h2>本サイトについて</h2>
 
 		<p>試験中。随時更新予定。</p>
