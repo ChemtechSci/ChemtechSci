@@ -1,0 +1,10 @@
+---
+import Layout from './Layout.astro';
+const { frontmatter } = Astro.props;
+---
+
+<Layout pageTitle={frontmatter.title}>
+    <h1>{frontmatter.title}</h1>
+    <p>著者: {frontmatter.author}</p>
+    <slot />
+</Layout>
