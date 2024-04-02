@@ -4,7 +4,27 @@ import Navigation from './Navigation.astro';
 ---
 <header>
   <nav>
+    <a id=title href="https://chemtechsci.github.io">Chemtech</a>
     <Hamburger />
     <Navigation />
   </nav>
 </header>
+
+<style>
+  nav {
+    width: 100vw;
+    margin: 0;
+    padding: 1rem;
+    background-color: #3a3d3f;
+    display: flex;
+  }
+
+  nav #title{
+    font-size: 2rem;
+    margin: 1rem auto;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+  }
+
+</style>

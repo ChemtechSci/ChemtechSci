@@ -1,4 +1,7 @@
 ---
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 interface Props {
 	title: string;
 }
@@ -13,11 +16,17 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>
 <style is:global>
