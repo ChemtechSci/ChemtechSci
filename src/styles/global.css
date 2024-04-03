@@ -9,9 +9,15 @@ html {
   body {
     margin: 0;
     width: 100%;
-    max-width: 80ch;
-    padding: 1rem;
+    padding: 0;
     line-height: 1.5;
+  }
+
+  .wrapper {
+    margin: 1em auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1280px;
   }
   
   * {

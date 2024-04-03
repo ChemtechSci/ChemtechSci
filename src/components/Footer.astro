@@ -4,16 +4,25 @@ import Social from './Social.astro';
 
 <footer>
     <div class="footer">
-        <Social platform="x" username="_chemtech" />
-        <Social platform="youtube" username="chemtech4278" />
-        <Social platform="github" username="ChemtechSci" />
-        <small>&copy;Copyright Chemtech. All rights reserved.</small>
+        <div class="social">
+            <Social platform="x" username="_chemtech" />
+            <Social platform="youtube" username="channel/UCFVBhZcKz2UelMbmkbQz0Nw" />
+            <Social platform="github" username="ChemtechSci" />
+        </div>
+        <small class="copy">&copy;Copyright Chemtech. All rights reserved.</small>
     </div>
 </footer>
 
 <style>
     .footer {
+        padding: 1rem;
         color: #c9cbcd;
         border-top: 0.01em solid #c9cdcd;
+        display:flex;
+        flex-flow: column;
+    }
+    .social, .copy {
+        margin: auto;
+        justify-content: center 
     }
 </style>
