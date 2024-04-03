@@ -1,15 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import BlogPost from '../components/BlogPost.astro';
-const allPosts = await Astro.glob('../pages/posts/*.md');
-const pageTitle = "私のAstro学習ブログ";
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+const pageTitle = "Chemtechについて";
 ---
 
 <Layout title={pageTitle}>
-  <p>ここには、私がAstroを学んでいく旅の様子を投稿します。</p>
-  <ul>
-    {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
-  </ul>
+	<main>
+		<h1>{pageTitle}</h1>
+		<h2>Chemtechとは？</h2>
+		<p>Chemtechは、東京工業大学の化学分野自主ゼミサークルです。理学院化学系、物質理工学院を中心に、様々な専攻の学生（学部生・大学院生）が化学について学習し、理解を深めています。不定期で交流会も開催されており、先輩方の研究や最新の論文に触れる機会もあります。</p>
+		
+		<h2>活動</h2>
+		<p>Chemtechでは、メンバーごとの興味に合わせて、様々なゼミが開催されています。メンバーは好きなゼミに参加するだけでなく、自ら教科書・科目を選んでゼミを企画し、参加者を募ることもできます。</p>
+		<p>ゼミは概ね毎週1回のペースで開催され、長期休暇中はZOOM等を活用したオンラインゼミを行う場合もあります。日程や開催方式は参加者で調整するので、参加のしやすさが特長です。</p>
+
+		<h2>入会について</h2>
+		<p>東京工業大学の学生であれば、年次によらずいつでも入会できます。<a href="https:x.com/_chemtech" target="_blank" rel="noopener noreferrer">公式X（旧：Twitter）アカウント</a>またはメール（titech.chemtech[at]gmail.com、[at]は@に置換）にてご連絡ください。</p>
+	</main>
 </Layout>
 
-<style></style>
+<style>
+</style>
