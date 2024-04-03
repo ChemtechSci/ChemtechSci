@@ -15,7 +15,7 @@ html {
 
   .wrapper {
     margin: 1em auto;
-    padding: 1rem;
+    padding: 0 min(5rem,5%);
     width: 100%;
     max-width: 1280px;
   }
@@ -31,41 +31,78 @@ html {
 
 
 /* ナビゲーションのスタイル */
-.hamburger {
-  padding-right: 20px;
-  cursor: pointer;
+nav {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #3a3d3f;
+    display:flex;
+    flex-flow: column;
 }
 
-.hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #ff9776;
+nav .chemtech {
+    margin: 0 ;
 }
 
-.nav-links {
+nav .title{
     width: 100%;
-    top: 5rem;
-    left: 48px;
-    background-color: #ff9776;
+    font-size: 2rem;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    justify-content: space-between;
+    display: flex;
+}
+  
+  nav .title a {
+    color: white;   
+    text-decoration: none;
+  }
+
+  nav .nav{
+    margin: auto 0;
+    justify-content: center;
+  }
+
+  .non-hamburger{
+    width: 40px;
+  }
+  .hamburger {
+  padding: 0;
+  cursor: pointer;
+  }
+
+  .hamburger .line {
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    background-color: #5ea8a1;
+  }
+
+  .nav-links {
+    margin: 0;
+    padding: 0;
+    background-color: #5ea8a1;
     display: none;
     margin: 0;
   }
   
   .nav-links a {
+    width: 100vw;
+    margin: 0;
+    color: white;
     display: block;
     text-align: center;
     padding: 10px 0;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1rem;
     text-transform: uppercase;
   }
   
   .nav-links a:hover,
   .nav-links a:focus {
-    background-color: #ff9776;
+    background-color: #5ea8a1;
   }
   
   .expanded {
@@ -73,22 +110,32 @@ html {
   }
   
   @media screen and (min-width: 636px) {
+    nav .title{
+        margin: 1rem auto 0;
+    }
+
     .nav-links {
-      margin-left: 5em;
-      display: block;
-      position: static;
-      width: auto;
+      display: flex;
+      margin: 0 auto;
+      width: min(90vw,300px);
       background: none;
     }
   
     .nav-links a {
-      display: inline-block;
-      padding: 15px 20px;
+        width: calc(100%/3);
+        margin: 0;
+        color: white;
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        text-decoration: none;
+        font-size: 1rem;
+        text-transform: uppercase;
     }
   
-    .hamburger {
+    .hamburger, .non-hamburger {
         display: none;
-      }
+    }
   }
   
 /* footerのレイアウトはlayouts/Footer.astroに記述しています */
