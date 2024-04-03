@@ -1,4 +1,7 @@
 ---
-const { platform, username } = Astro.props;
+import { Image } from 'astro:assets';
+const { platform, username, logo } = Astro.props;
+import socialIcon from "./images/x-logo.png";
 ---
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+<a href={`https://www.${platform}.com/${username}`}><Image src={socialIcon} alt=`${platform}のロゴ` width="50" height="50"/>{platform}</a>
+<a href="../index.html"></a>

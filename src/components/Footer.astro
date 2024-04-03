@@ -1,13 +1,16 @@
 ---
-import Social from './Social.astro';
+import { Image } from 'astro:assets';
+import xIcon from "./images/x-logo.png";
+import youtubeIcon from "./images/youtube-logo.png";
+import githubIcon from "./images/github-logo.svg";
 ---
 
 <footer>
     <div class="footer">
         <div class="social">
-            <Social platform="x" username="_chemtech" />
-            <Social platform="youtube" username="channel/UCFVBhZcKz2UelMbmkbQz0Nw" />
-            <Social platform="github" username="ChemtechSci" />
+            <a href={`https://www.x.com/_chemtech`}><Image src={xIcon} alt=`xのロゴ` width="50" height="50"/></a>
+            <a href={`https://www.youtube.com/channel/UCFVBhZcKz2UelMbmkbQz0Nw`}><Image src={youtubeIcon} alt=`youtubeのロゴ` width="50" height="50"/></a>
+            <a href={`https://www.github.com/ChemtechSci`}><Image src={githubIcon} alt=`githubのロゴ` width="50" height="50"/></a>
         </div>
         <small class="copy">&copy;Copyright Chemtech. All rights reserved.</small>
     </div>
