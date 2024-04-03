@@ -32,7 +32,7 @@ html {
 
 /* ナビゲーションのスタイル */
 nav {
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color: #3a3d3f;
