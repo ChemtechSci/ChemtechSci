@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro';
 import BlogPost from '../components/BlogPost.astro';
 const allPosts = await Astro.glob('../pages/posts/*.md');
 const pageTitle = "私のAstro学習ブログ";
@@ -10,4 +11,6 @@ const pageTitle = "私のAstro学習ブログ";
   <ul>
     {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
   </ul>
-</BaseLayout>
+</Layout>
+
+<style></style>
