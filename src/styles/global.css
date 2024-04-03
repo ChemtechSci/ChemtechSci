@@ -112,6 +112,7 @@ nav .title{
   @media screen and (min-width: 636px) {
     nav .title{
         margin: 1rem auto 0;
+        justify-content: space-around;
     }
 
     .nav-links {
