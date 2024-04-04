@@ -1,6 +1,6 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
-title: '私の最初のブログ記事'
+layout: ../../../layouts/MarkdownPostLayout.astro
+title: 'test2'
 pubDate: 2024-04-02
 updateDate: 2024-04-04
 description: 'これは私の新しいAstroブログの最初の記事です。'
@@ -21,4 +21,8 @@ tags: ["astro", "ブログ", "公開学習"]
 ## 次の目標
 
 Astroチュートリアルを終え、さらに記事を追加していきます。これからもこの場所をご覧ください。
+
+## tex形式のテスト
+
+$\frac{1}{e}$
 
