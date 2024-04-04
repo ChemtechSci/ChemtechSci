@@ -26,29 +26,50 @@ html {
   }
   
   h1 {
-    margin: 1rem 0;
+    margin: 0.5em 0;
+    font-size: 2rem;
     padding-left: 0.5rem;
-    font-size: 2.5rem;
+  }
+  h2 {
+    margin: 0.5em 0;
+    padding-left: 0.5rem;
     border-bottom: 0.01em solid #c9cdcd;
   }
   p{
+    margin: 0.5em;
     text-indent: 1rem;
+  }
+  p.head{
+    text-indent: 0;
   }
 
 /* タグのスタイル*/
 .tags {
+    margin-left: 0.5em;
     display: flex;
     flex-wrap: wrap;
+    color: #3a3d3f;
 }
 
 .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: .5em;
-    padding: .5em 1em;
-    font-size: 1.15em;
-    background-color: #F8FCFD;
+    margin: 0 0.25em;
+    border-radius: .2em;
+    padding: 0.05em;
+    font-size: 0.9em;
+    background-color: #c9cbcd;
+    pointer-events: none;
 }
+.tag a{
+    color: #3a3d3f;
+    pointer-events: auto;
+    text-decoration: none;
+}
+
+.tag:hover,
+.tag:focus {
+    background-color: #7fc3b6;
+}
+  
 /* ナビゲーションのスタイル */
 nav {
     width: 100%;

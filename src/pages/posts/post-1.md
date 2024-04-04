@@ -2,6 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: '私の最初のブログ記事'
 pubDate: 2024-04-02
+updateDate: 2024-04-04
 description: 'これは私の新しいAstroブログの最初の記事です。'
 author: 'Astro学習者'
 image:
@@ -9,11 +10,6 @@ image:
     alt: 'Astroのロゴ。'
 tags: ["astro", "ブログ", "公開学習"]
 ---
-
-投稿日: 2024-04-02
-
-Astroの学習についての私の _新しいブログ_ へようこそ！ここでは、新しいウェブサイトを作りながら、私の学習過程を共有します。
-
 ## 達成したこと
 
 1. **Astroのインストール**: まず、新しいAstroプロジェクトを作成し、オンラインアカウントを設定しました。

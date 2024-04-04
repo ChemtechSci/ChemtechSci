@@ -2,21 +2,23 @@
 import Layout from './Layout.astro';
 const { frontmatter } = Astro.props;
 ---
-<Layout title={frontmatter.title}>
-  <p><em>{frontmatter.description}</em></p>
-  <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
+<Layout title=`${frontmatter.title} - Chemtech`>
+    
+    <p class="head">著者：{frontmatter.author}</p>
 
-  <p>著者: {frontmatter.author}</p>
+    <h1>{frontmatter.title}</h1>
+    <!--p class="head">{frontmatter.description}<br></p-->
+    
+    <div class="tags">
+        タグ：{frontmatter.tags.map((tag: string) => (
+        <div class="tag"><a href={`/tags/${tag}`}>{tag}</a></div>
+        ))}
+    </div>
+    
+    <div class="tags">公開：{frontmatter.pubDate.toString().slice(0,10)}・最終更新：{frontmatter.pubDate.toString().slice(0,10)}</div>
 
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-
-  <div class="tags">
-    {frontmatter.tags.map((tag: string) => (
-      <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
-    ))}
-  </div>
-
-  <slot />
+    <!-- img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} /-->
+    <slot />
 </Layout>
 <style>
 </style>
