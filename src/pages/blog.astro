@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro';
 import BlogPost from '../components/BlogPost.astro';
-const allPosts = await Astro.glob('../pages/posts/*/index.(md|mdx)');
+const allPosts = await Astro.glob('../pages/posts/**/index.{md,mdx}');
 const pageTitle = "私のAstro学習ブログ";
 ---
 
