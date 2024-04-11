@@ -12,8 +12,11 @@
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "@astrojs/mdx": "^2.2.3",
+    "@astrojs/sitemap": "^3.1.2",
     "astro": "^4.5.13",
     "katex": "^0.16.10",
+    "rehype-katex": "^7.0.0",
+    "remark-math": "^6.0.0",
     "typescript": "^5.4.3"
   }
 }
